@@ -2,7 +2,41 @@
 .poppins-font {
     font-family: "Poppins", sans-serif;
 }
-
+/* animation section  */
+@keyframes banner {
+    0%{
+        opacity: 0.30;
+    }
+    25%{
+        opacity:0.45 ;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    75%{
+        opacity: 0.75;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes banner-img {
+    0%{
+        transform: translateX(-75%);
+    }
+    25%{
+         transform: translateX(-50%);
+    }
+    50%{
+         transform: translateX(-25%);
+    }
+    75%{
+        transform: translateX(-15%);
+    }
+    100%{
+         transform: translateX(0%);
+    }
+}
 /* common */
 * {
     margin: 0;
@@ -33,6 +67,7 @@
     padding: 0 3rem;
     align-items: center;
     margin-top: 2rem;
+    animation: banner .7s ease-in-out  1 forwards;
 }
 
 .banner-content h2 {
@@ -54,6 +89,7 @@ img {
 .banner-img img {
     display: block;
     padding-top: 2rem;
+    animation: banner-img .5s ease  1 forwards;
 }
 
 /* manin section style start  */
