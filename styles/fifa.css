@@ -56,6 +56,75 @@ img {
     padding-top: 2rem;
 }
 
+/* manin section style start  */
+main{
+    max-width:1414px ;
+    margin: auto;
+}
+/* upcoming-match section start  */
+.upcoming-match{
+    display: flex;
+    gap: 55px;
+}
+.upcoming-match-left{
+    background-color: black;
+    max-width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 312px;
+    max-height: 312px;
+}
+.upcoming-match-left button:nth-child(1){
+    background-color: #fff;
+    color: black;
+}
+.upcoming-match-left button:nth-child(2){
+    background-color: #fff;
+    color: black;
+}
+/* upcoming-match-right section style  */
+.upcoming-match-right{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.75rem;
+    flex: 1;
+}
+.card{
+    width: 312px;
+    height: 362px;
+    border: 1px solid rgba(113, 106, 106, 0.656);
+    border-radius: .7rem;
+}
+.card img{
+    border-radius: .7rem;
+}
+.card-content{
+    padding-left: 1.25rem;
+}
+.card-content button{
+    color: black;
+    background-color: transparent;
+    border: 2px solid rgb(113, 99, 99);
+    border-radius: 5px;
+    margin: .5rem 0;
+}
+.card-content h4{
+    font-size: 18px;
+    font-weight: 600;
+    color: #161616;
+}
+.card-bottom{
+    display: flex;
+    gap: 2.5rem;
+    margin-top: 1.25rem;
+}
+.card-bottom i{
+    padding-right: 1rem;
+}
 /* quary for tablet  */
 @media (max-width:992px) {
     .banner {
@@ -78,10 +147,31 @@ img {
     .banner-content img {
         padding-top: 7rem;
     }
-}
+    /* upcoming-match */
+     .upcoming-match {
+        flex-direction: column;
+        border-radius: .5rem;
+        padding: 0 .5rem;
+        margin: 0 1rem;
+    }
+     .upcoming-match-left {
+        flex-direction: row;
+        max-width: 100%;
+        background-color: transparent;
+    }
+    .upcoming-match-left button{
+        border: 1px solid rgb(92, 87, 87);
+    }
 
+    .upcoming-match-right{
+    grid-template-columns: repeat(2,1fr);
+    justify-items: center;
+}
+}
+/* quary for mobile  */
 @media (max-width:576px) {
-    .banner {
+    .banner,
+    .upcoming-match {
         flex-direction: column;
         border-radius: .5rem;
         padding: 0 .5rem;
@@ -91,4 +181,17 @@ img {
     .banner-content {
         text-align: center;
     }
+    /* upcoming-match left */
+    .upcoming-match-left{
+        background-color: white;
+        margin-top: 1.75rem;
+        flex-direction: column;
+    }
+    .upcoming-match-left button{
+        border: 1px solid rgb(92, 87, 87);
+    }
+    /* upcoming-match-right */
+    .upcoming-match-right{
+    grid-template-columns: repeat(1,1fr);
+}
 }
